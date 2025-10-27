@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Alfajores del Caldero Dulce",
+    "description": "Deliciosos alfajores artesanales, rellenos de manjar y bañados en chocolate. Hechos con fuego, miel y mucho amor.",
+    "category": "Dulces",
+    "price": 1200,
+    "image": "assets/images/products/alfajores.png",
+    "guardian": "Tayler"
+  },
+  {
+    "id": 2,
+    "name": "Hamburguesas del Sol Crepuscular",
+    "description": "Jugosas hamburguesas caseras preparadas con carne fresca y especias del gremio. Una llama de sabor en cada mordisco.",
+    "category": "Comidas",
+    "price": 4000,
+    "image": "assets/images/products/hamburguesas.png",
+    "guardian": "Kalila"
+  }
+]

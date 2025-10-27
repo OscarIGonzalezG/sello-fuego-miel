@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "Tom",
+    "title": "Archimago del Fuego y la Miel",
+    "description": "Sabio fundador del gremio. Enseñó que el fuego y la miel podían coexistir para forjar sabores únicos.",
+    "role": "Líder del Gremio",
+    "image": "assets/images/characters/tom.png",
+    "quote": "El equilibrio entre fuego y dulzura es el secreto de toda creación.",
+    "color": "#d97706"
+  },
+  {
+    "id": 2,
+    "name": "Tayler",
+    "title": "Guardián del Caldero Dulce",
+    "description": "Héroe joven y alegre, maestro de los alfajores. Combina fuego controlado y miel dorada para crear dulzura artesanal.",
+    "role": "Maestro Repostero",
+    "image": "assets/images/characters/tayler.png",
+    "quote": "Cada bocado lleva una chispa de magia dulce.",
+    "color": "#f59e0b"
+  },
+  {
+    "id": 3,
+    "name": "Kalila",
+    "title": "Defensora del Alba Dorada",
+    "description": "Protectora de las recetas del gremio. Su espada corta solo para defender la tradición casera.",
+    "role": "Guerrera del Sabor",
+    "image": "assets/images/characters/kalila.png",
+    "quote": "La fuerza del fuego, templada con dulzura, mantiene vivo el sello.",
+    "color": "#eab308"
+  },
+  {
+    "id": 4,
+    "name": "Rucio León",
+    "title": "Paladín del Sol Crepuscular",
+    "description": "Defiende el honor del gremio y asegura que cada creación sea digna del sello.",
+    "role": "Paladín del Gremio",
+    "image": "assets/images/characters/rucio.png",
+    "quote": "El deber del fuego es proteger la dulzura del alma.",
+    "color": "#b45309"
+  },
+  {
+    "id": 5,
+    "name": "Maiga",
+    "title": "Maga del Bosque Dorado",
+    "description": "Infunde magia dulce en cada receta, usando el poder ancestral de la miel.",
+    "role": "Hechicera del Dulzor",
+    "image": "assets/images/characters/maiga.png",
+    "quote": "Donde la miel brilla, nace la magia.",
+    "color": "#a16207"
+  },
+  {
+    "id": 6,
+    "name": "Morita",
+    "title": "Sabia del Sello Ardiente",
+    "description": "Consejera del gremio. Su fuego interior mantiene viva la llama del espíritu artesanal.",
+    "role": "Sabia y Consejera",
+    "image": "assets/images/characters/morita.png",
+    "quote": "La paciencia es el fuego que no quema, sino que madura.",
+    "color": "#92400e"
+  },
+  {
+    "id": 7,
+    "name": "Lucky Ford",
+    "title": "Cronista de la Cuchara Rota",
+    "description": "Registra las crónicas del gremio y experimenta con nuevas mezclas de sabores.",
+    "role": "Narrador y Alquimista",
+    "image": "assets/images/characters/lucky.png",
+    "quote": "Cada receta tiene una historia que contar.",
+    "color": "#78350f"
+  },
+  {
+    "id": 8,
+    "name": "Princesa Vaquita Mojojojo",
+    "title": "Arquera del Velo Lunar",
+    "description": "Velocísima y precisa, entrega dulzura y sabor por todo el reino, con una cinta dorada en su trenza como distintivo real.",
+    "role": "Mensajera del Gremio",
+    "image": "assets/images/characters/vaquita.png",
+    "quote": "Cada entrega lleva mi sello y una sonrisa.",
+    "color": "#f59e0b"
+  }
+]

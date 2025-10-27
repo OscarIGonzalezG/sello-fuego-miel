@@ -1,0 +1,31 @@
+<!-- ⚜️ Navbar Estandarte Dorado -->
+<nav class="navbar-estandarte">
+  <div class="estandarte-cuerpo">
+    <!-- 🌞 Enlaces Izquierda -->
+    <div class="estandarte-lado desktop-only">
+      <a routerLink="/" class="link-estandarte">Inicio</a>
+      <a routerLink="/productos" class="link-estandarte">Productos</a>
+    </div>
+
+    <!-- 🔥 Logo Central (abre menú móvil) -->
+    <div class="estandarte-logo" (click)="toggleMenu()">
+      <img src="assets/images/logo/Logo.png" alt="Sello de Fuego y Miel" />
+    </div>
+
+    <!-- 🌕 Enlaces Derecha -->
+    <div class="estandarte-lado desktop-only">
+      <a routerLink="/gremio" class="link-estandarte">El Gremio</a>
+      <a routerLink="/anuncios" class="link-estandarte">Anuncios</a>
+      <a routerLink="/contacto" class="link-estandarte">Contacto</a>
+    </div>
+  </div>
+
+  <!-- 📱 Menú móvil (aparece solo en pantallas pequeñas) -->
+  <div class="menu-movil" [class.abierto]="menuAbierto()">
+    <a routerLink="/" (click)="toggleMenu()" class="link-estandarte">Inicio</a>
+    <a routerLink="/productos" (click)="toggleMenu()" class="link-estandarte">Productos</a>
+    <a routerLink="/gremio" (click)="toggleMenu()" class="link-estandarte">El Gremio</a>
+    <a routerLink="/anuncios" (click)="toggleMenu()" class="link-estandarte">Anuncios</a>
+    <a routerLink="/contacto" (click)="toggleMenu()" class="link-estandarte">Contacto</a>
+  </div>
+</nav>
