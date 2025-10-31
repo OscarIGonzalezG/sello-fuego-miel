@@ -6,7 +6,7 @@ import { Navbar } from './core/components/navbar/navbar';
   selector: 'app-root',
   imports: [RouterOutlet, Navbar],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css']
 })
 export class App {
   protected readonly title = signal('sello-fuego-miel');

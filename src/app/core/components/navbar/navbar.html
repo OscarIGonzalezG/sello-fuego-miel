@@ -1,31 +1,82 @@
-<!-- ⚜️ Navbar Estandarte Dorado -->
-<nav class="navbar-estandarte">
-  <div class="estandarte-cuerpo">
-    <!-- 🌞 Enlaces Izquierda -->
-    <div class="estandarte-lado desktop-only">
-      <a routerLink="/" class="link-estandarte">Inicio</a>
-      <a routerLink="/productos" class="link-estandarte">Productos</a>
-    </div>
-
-    <!-- 🔥 Logo Central (abre menú móvil) -->
-    <div class="estandarte-logo" (click)="toggleMenu()">
-      <img src="assets/images/logo/Logo.png" alt="Sello de Fuego y Miel" />
-    </div>
-
-    <!-- 🌕 Enlaces Derecha -->
-    <div class="estandarte-lado desktop-only">
-      <a routerLink="/gremio" class="link-estandarte">El Gremio</a>
-      <a routerLink="/anuncios" class="link-estandarte">Anuncios</a>
-      <a routerLink="/contacto" class="link-estandarte">Contacto</a>
-    </div>
+<!-- 🌟 Navbar flotante cápsula -->
+<nav
+  class="fixed top-4 left-1/2 transform -translate-x-1/2 w-11/12 md:w-4/5 
+         bg-primary/70 backdrop-blur-md border border-(--border-color)
+         rounded-full shadow-lg nav-glow animate-slideDownFade flex items-center 
+         justify-between px-6 py-3 z-50">
+  
+  <!-- 🔥 Logo -->
+  <div class="flex items-center space-x-3">
+    <img src="assets/images/logo/Logo.png" alt="Sello de Fuego y Miel" class="w-12 h-12 rounded-full shadow-md glow-pulse" />
+    <span class="text-accent text-xl font-semibold tracking-wide">Sello de Fuego y Miel</span>
   </div>
 
-  <!-- 📱 Menú móvil (aparece solo en pantallas pequeñas) -->
-  <div class="menu-movil" [class.abierto]="menuAbierto()">
-    <a routerLink="/" (click)="toggleMenu()" class="link-estandarte">Inicio</a>
-    <a routerLink="/productos" (click)="toggleMenu()" class="link-estandarte">Productos</a>
-    <a routerLink="/gremio" (click)="toggleMenu()" class="link-estandarte">El Gremio</a>
-    <a routerLink="/anuncios" (click)="toggleMenu()" class="link-estandarte">Anuncios</a>
-    <a routerLink="/contacto" (click)="toggleMenu()" class="link-estandarte">Contacto</a>
+  <!-- 🍯 Enlaces (desktop) -->
+  <ul class="hidden md:flex space-x-8 text-primary font-medium text-lg">
+    <li><a routerLink="/" class="menu-link">Inicio</a></li>
+    <li><a routerLink="/productos" class="menu-link">Productos</a></li>
+    <li><a routerLink="/gremio" class="menu-link">El Gremio</a></li>
+    <li><a routerLink="/anuncios" class="menu-link">Anuncios</a></li>
+    <li><a routerLink="/contacto" class="menu-link">Contacto</a></li>
+  </ul>
+
+  <!-- 📱 Iconos + menú móvil -->
+  <div class="flex items-center space-x-4">
+    <a href="https://wa.me/56900000000" target="_blank" class="text-accent hover:text-highlight text-2xl transition">
+      <i class="bi bi-whatsapp"></i>
+    </a>
+    <a href="https://instagram.com/sellofuegoymiel" target="_blank" class="text-accent hover:text-highlight text-2xl transition">
+      <i class="bi bi-instagram"></i>
+    </a>
+
+    <!-- Menú hamburguesa -->
+    <button (click)="toggleMenu()" class="md:hidden focus:outline-none">
+      <div class="relative w-8 h-6 flex flex-col justify-between">
+        <span
+          class="block w-full h-[3px] bg-(--accent-gold) rounded transition-transform duration-300"
+          [ngClass]="{ 'rotate-45 translate-y-2.5': isMenuOpen() }"
+        ></span>
+        <span
+          class="block w-full h-[3px] bg-(--accent-gold) rounded transition-opacity duration-300"
+          [ngClass]="{ 'opacity-0': isMenuOpen() }"
+        ></span>
+        <span
+          class="block w-full h-[3px] bg-(--accent-gold) rounded transition-transform duration-300"
+          [ngClass]="{ '-rotate-45 -translate-y-2.5': isMenuOpen() }"
+        ></span>
+      </div>
+    </button>
+
   </div>
 </nav>
+
+<!-- 📜 Overlay (fondo oscuro detrás del menú) -->
+<div
+  *ngIf="isMenuOpen()"
+  class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 transition-opacity duration-300"
+  (click)="toggleMenu()"
+></div>
+
+<!-- 🍯 Drawer lateral derecho con fondo fuego-miel -->
+<div
+  class="menu-fire fixed top-0 right-0 h-screen w-full sm:w-3/4 shadow-2xl z-50 transform transition-transform duration-500 ease-in-out bg-cover bg-center"
+  [ngClass]="{ 'translate-x-0': isMenuOpen(), 'translate-x-full': !isMenuOpen() }"
+>
+
+  <!-- 🔥 Botón cerrar -->
+  <button
+    (click)="toggleMenu()"
+    class="absolute top-6 right-6 text-(--accent-gold) text-3xl hover:text-(--accent-fire) transition"
+  >
+    
+  </button>
+
+  <!-- 📜 Enlaces del menú -->
+  <ul class="flex flex-col items-center justify-center h-full space-y-8 text-2xl font-medium text-(--text-color)  rounded-3xl mx-4 py-10 shadow-inner">
+    <li><a routerLink="/" (click)="toggleMenu()" class="menu-link">Inicio</a></li>
+    <li><a routerLink="/productos" (click)="toggleMenu()" class="menu-link">Productos</a></li>
+    <li><a routerLink="/gremio" (click)="toggleMenu()" class="menu-link">El Gremio</a></li>
+    <li><a routerLink="/anuncios" (click)="toggleMenu()" class="menu-link">Anuncios</a></li>
+    <li><a routerLink="/contacto" (click)="toggleMenu()" class="menu-link">Contacto</a></li>
+  </ul>
+</div>

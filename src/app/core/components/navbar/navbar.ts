@@ -1,19 +1,22 @@
 import { Component, signal } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [RouterModule, CommonModule],
   templateUrl: './navbar.html',
-  styleUrls: ['./navbar.css']
+  styleUrls: ['./navbar.css'],
 })
 export class Navbar {
-  menuAbierto = signal(false);
+  isMenuOpen = signal(false);
 
-  toggleMenu(): void {
-    this.menuAbierto.set(!this.menuAbierto());
+  toggleMenu() {
+    this.isMenuOpen.update((open) => {
+      const newState = !open;
+      document.body.classList.toggle('menu-open', newState);
+      return newState;
+    });
   }
 }
-
